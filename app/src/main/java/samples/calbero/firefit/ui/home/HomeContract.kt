@@ -7,6 +7,10 @@ interface HomeContract {
 
     interface View : BaseView<Presenter>
 
-    interface Presenter : BasePresenter<View>
+    interface Presenter : BasePresenter<View> {
+
+        fun roomService()
+
+    }
 
 }

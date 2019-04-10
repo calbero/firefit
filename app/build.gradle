@@ -44,8 +44,15 @@ dependencies {
     implementation "org.jetbrains.anko:anko-sdk25:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
 
+    // Room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
     //Charts
     implementation 'com.jjoe64:graphview:4.2.2'
+
+    //Stetho
+    debugImplementation 'com.facebook.stetho:stetho:1.5.0'
 
     //Dagger 2
     implementation "com.google.dagger:dagger:$dagger2_version"
