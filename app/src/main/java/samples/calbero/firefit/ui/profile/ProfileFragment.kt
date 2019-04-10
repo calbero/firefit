@@ -1,18 +1,16 @@
-package samples.calbero.firefit.ui.main
+package samples.calbero.firefit.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.main_fragment.*
 import samples.calbero.firefit.R
 import samples.calbero.firefit.ui.base.BaseFragment
-import samples.calbero.firefit.ui.graph.GraphFragment
 import javax.inject.Inject
 
-class MainFragment : BaseFragment(), MainContract.View {
+class ProfileFragment : BaseFragment(), ProfileContract.View {
 
-    @Inject lateinit var presenter: MainContract.Presenter
+    @Inject lateinit var presenter: ProfileContract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +18,8 @@ class MainFragment : BaseFragment(), MainContract.View {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.main_fragment, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        main_button.setOnClickListener {
-            replaceFragment(GraphFragment.newInstance(), R.id.contentFrame)
-        }
+        val view = inflater.inflate(R.layout.profile_fragment, container, false)
+        return view
     }
 
     override fun onResume() {
@@ -41,7 +33,6 @@ class MainFragment : BaseFragment(), MainContract.View {
     }
 
     companion object {
-        fun newInstance(): MainFragment = MainFragment().apply {}
+        fun newInstance(): ProfileFragment = ProfileFragment().apply { }
     }
-
 }

@@ -13,9 +13,11 @@ class GraphPresenter : GraphContract.Presenter {
 
     private fun generatePoints(): Array<DataPoint> {
         return arrayOf(
-            DataPoint(0.0, 1.0),
-            DataPoint(1.0, 3.0),
-            DataPoint(2.0, 5.0)
+            DataPoint(70.0, 1.0),
+            DataPoint(73.0, 2.0),
+            DataPoint(76.0, 4.0),
+            DataPoint(78.0, 5.0),
+            DataPoint(81.0, 7.0)
         )
     }
 

@@ -4,10 +4,12 @@ import dagger.Module
 import dagger.Provides
 import samples.calbero.firefit.ui.graph.GraphContract
 import samples.calbero.firefit.ui.graph.GraphPresenter
+import samples.calbero.firefit.ui.home.HomeContract
+import samples.calbero.firefit.ui.home.HomePresenter
 import samples.calbero.firefit.ui.login.LoginContract
 import samples.calbero.firefit.ui.login.LoginPresenter
-import samples.calbero.firefit.ui.main.MainContract
-import samples.calbero.firefit.ui.main.MainPresenter
+import samples.calbero.firefit.ui.profile.ProfileContract
+import samples.calbero.firefit.ui.profile.ProfilePresenter
 
 @Module
 class FragmentModule {
@@ -16,8 +18,11 @@ class FragmentModule {
     fun provideLoginFragment(): LoginContract.Presenter = LoginPresenter()
 
     @Provides
-    fun provideMainFragment(): MainContract.Presenter = MainPresenter()
+    fun provideHomeFragment(): HomeContract.Presenter = HomePresenter()
 
     @Provides
     fun provideGraphFragment(): GraphContract.Presenter = GraphPresenter()
+
+    @Provides
+    fun provideProfileFragment(): ProfileContract.Presenter = ProfilePresenter()
 }

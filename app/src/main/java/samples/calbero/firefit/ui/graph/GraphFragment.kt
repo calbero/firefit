@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jjoe64.graphview.GridLabelRenderer
 import kotlinx.android.synthetic.main.graph_fragment.*
 import samples.calbero.firefit.R
 import samples.calbero.firefit.ui.base.BaseFragment
@@ -25,6 +26,8 @@ class GraphFragment : BaseFragment(), GraphContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         graph.addSeries(presenter.drawGraph())
+        graph.gridLabelRenderer.gridStyle = GridLabelRenderer.GridStyle.NONE
+        graph.title = "grpah"
     }
 
     override fun onResume() {
