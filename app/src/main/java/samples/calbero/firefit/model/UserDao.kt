@@ -8,6 +8,6 @@ import androidx.room.OnConflictStrategy.REPLACE
 interface UserDao {
 
     @Insert(onConflict = REPLACE)
-    fun insert(user: User)
+    fun insert(user: User): Long
 
 }
